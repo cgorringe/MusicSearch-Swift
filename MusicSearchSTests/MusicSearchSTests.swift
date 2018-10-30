@@ -40,39 +40,4 @@ class MusicSearchSTests: XCTestCase {
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   // MARK: - APIManager Tests
 
-/*
-  func testUrlEncodedValue() {
-
-    let test1 = api.urlEncodedValue("example")
-    XCTAssertEqual(test1, "example")
-
-    let test2 = api.urlEncodedValue("here are some spaces")
-    XCTAssertEqual(test2, "here+are+some+spaces")
-
-    let test3 = api.urlEncodedValue("unreserved123-_.~")
-    XCTAssertEqual(test3, "unreserved123-_.~")
-
-    let test4 = api.urlEncodedValue("ampersand&ampersand")
-    XCTAssertEqual(test4, "ampersand%26ampersand")
-
-    let test5 = api.urlEncodedValue("plus+plus")
-    XCTAssertEqual(test5, "plus+plus")   // should be escaped!
-
-    let test6 = api.urlEncodedValue("colon:colon")
-    XCTAssertEqual(test6, "colon:colon")   // not sure?
-
-    let test7 = api.urlEncodedValue("percent%percent")
-    XCTAssertEqual(test7, "percent%25percent")
-
-    let test8 = api.urlEncodedValue("equals=equals")
-    XCTAssertEqual(test8, "equals=equals")  // should be escaped!
-
-    let test9 = api.urlEncodedValue("q?q")
-    XCTAssertEqual(test9, "q?q")  // should be escaped!
-
-    let test10 = api.urlEncodedValue(":/?#[]@!$&'()*+,;=")
-    XCTAssertEqual(test10, ":/?%23%5B%5D@!$%26'()*+,;=")   // not correct?
-  }
-*/
-
 }
