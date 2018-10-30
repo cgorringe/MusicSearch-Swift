@@ -49,7 +49,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
       lvc.music = self.resultsList[(self.resultsTableView?.indexPathForSelectedRow?.row)!]
 
       // replace 'Back' button with empty text on pushed view controller
-      self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: nil, style: UIBarButtonItemStyle.plain, target: self, action: nil)
+      self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: nil, style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
   }
 
