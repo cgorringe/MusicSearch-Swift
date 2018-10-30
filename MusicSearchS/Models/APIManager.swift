@@ -20,16 +20,6 @@ class APIManager {
   ////////////////////////////////////////////////////////////////////////////////////////////////////
   // MARK: - General
 
-  /** URLencodes value so that spaces are replaced with pluses, and non-allowed characters are percent-encoded. */
-
-  func urlEncodedValue(_ value: String) -> String {
-    var cset = CharacterSet.urlQueryAllowed
-    cset.remove("&")
-    let value2 = value.replacingOccurrences(of: " ", with: "+")
-    let escaped = value2.addingPercentEncoding(withAllowedCharacters: cset)
-    return escaped ?? ""
-  }
-
   /** If data passed in is of the following form, this will return corrected JSON data,
       else if data is already valid JSON, this will simply return that data:
         song = { 'key' : 'value', ... }
@@ -69,11 +59,16 @@ class APIManager {
 
   func getMusic(_ query: String, completion: @escaping ([MusicModel]) -> Void) {
 
-    let url = "https://itunes.apple.com/search?term=\(urlEncodedValue(query))"
-    print("GET: \(url)")
+    // setup URL
+    // "https://itunes.apple.com/search?term=\(query)"
+    var components = URLComponents(string: "https://itunes.apple.com/search")!
+    components.queryItems = [URLQueryItem(name: "term", value: query)]
+    let url = components.url!
+    print("GET: \(url.absoluteString)")
 
+    // setup API call
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    let task = URLSession.shared.dataTask(with: URL(string:url)!) {
+    let task = URLSession.shared.dataTask(with: url) {
       (data, response, error) in
 
       var musicResults = [MusicModel]()
@@ -111,11 +106,19 @@ class APIManager {
 
   func getLyrics(for artist: String, song: String, completion: @escaping (String) -> Void ) {
 
-    let url = "https://lyrics.wikia.com/api.php?func=getSong&artist=\(urlEncodedValue(artist))&song=\(urlEncodedValue(song))&fmt=json"
-    print("GET: \(url)")
+    // setup URL
+    // "https://lyrics.wikia.com/api.php?func=getSong&artist=\(artist)&song=\(song)&fmt=json"
+    var components = URLComponents(string: "https://lyrics.wikia.com/api.php")!
+    components.queryItems = [ URLQueryItem(name: "func", value: "getSong"),
+                              URLQueryItem(name: "artist", value: artist),
+                              URLQueryItem(name: "song", value: song),
+                              URLQueryItem(name: "fmt", value: "json") ]
+    let url = components.url!
+    print("GET: \(url.absoluteString)")
 
+    // setup API call
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    let task = URLSession.shared.dataTask(with: URL(string:url)!) {
+    let task = URLSession.shared.dataTask(with: url) {
       (data, response, error) in
 
       var lyrics = ""
