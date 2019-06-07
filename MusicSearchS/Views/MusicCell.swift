@@ -10,10 +10,10 @@ import UIKit
 
 class MusicCell: UITableViewCell {
 
-  @IBOutlet weak var trackLabel: UILabel?
-  @IBOutlet weak var artistLabel: UILabel?
-  @IBOutlet weak var albumLabel: UILabel?
-  @IBOutlet weak var albumImageView: UIImageView?
+  @IBOutlet weak var trackLabel: UILabel!
+  @IBOutlet weak var artistLabel: UILabel!
+  @IBOutlet weak var albumLabel: UILabel!
+  @IBOutlet weak var albumImageView: UIImageView!
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -26,10 +26,10 @@ class MusicCell: UITableViewCell {
   }
 
   func updateWithMusicModel(_ music: MusicModel) {
-    self.trackLabel!.text = music.trackName
-    self.artistLabel!.text = music.artistName
-    self.albumLabel!.text = music.albumName
-    self.albumImageView!.image = UIImage(named: "music-placeholder")
+    self.trackLabel.text = music.trackName
+    self.artistLabel.text = music.artistName
+    self.albumLabel.text = music.albumName
+    self.albumImageView.image = UIImage(named: "music-placeholder")
 
     // send notification to retrieve image
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DownloadImage"),

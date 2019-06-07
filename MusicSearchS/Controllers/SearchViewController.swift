@@ -12,7 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
   UISearchBarDelegate, UIScrollViewDelegate
 {
 
-  @IBOutlet weak var resultsTableView: UITableView?
+  @IBOutlet weak var resultsTableView: UITableView!
   var searchController: UISearchController = UISearchController()
   var api: APIManager?
   var resultsList = [MusicModel]()
@@ -46,7 +46,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     if segue.identifier == "idLyricsSegue" {
       let lvc = segue.destination as! LyricsViewController
       lvc.api = self.api
-      lvc.music = self.resultsList[(self.resultsTableView?.indexPathForSelectedRow?.row)!]
+      lvc.music = self.resultsList[(self.resultsTableView.indexPathForSelectedRow?.row)!]
 
       // replace 'Back' button with empty text on pushed view controller
       self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: nil, style: UIBarButtonItem.Style.plain, target: self, action: nil)
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     self.api!.getMusic(query, completion: {
       (music: [MusicModel]) in
       self.resultsList = music
-      self.resultsTableView?.reloadData()
+      self.resultsTableView.reloadData()
     })
   }
 
