@@ -185,11 +185,11 @@
 				TargetAttributes = {
 					C329361021080B5C00D176D1 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					C329362421080B5D00D176D1 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = C329361021080B5C00D176D1;
 					};
 				};
@@ -413,7 +413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gorringe.MusicSearchS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,7 +431,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gorringe.MusicSearchS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -450,7 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gorringe.MusicSearchSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicSearchS.app/MusicSearchS";
 			};
@@ -470,7 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gorringe.MusicSearchSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicSearchS.app/MusicSearchS";
 			};

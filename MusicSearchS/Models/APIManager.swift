@@ -28,7 +28,7 @@ class APIManager {
   func fixInvalidJSONData(_ data: Data) -> Data? {
 
     // return if data is already valid JSON
-    if (try? JSONSerialization.jsonObject(with: data, options: []) as! [String: String]) != nil {
+    if (try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String]) != nil {
       return data
     }
 
