@@ -16,6 +16,7 @@ class LyricsViewController: UIViewController
   @IBOutlet weak var albumLabel: UILabel!
   @IBOutlet weak var albumImageView: UIImageView!
   @IBOutlet weak var lyricsTextView: UITextView!
+  @IBOutlet weak var contentView: UIView!
 
   var api: APIManager?
   var music: MusicModel?
@@ -54,7 +55,7 @@ class LyricsViewController: UIViewController
                                                   "imageUrl": music.albumImageUrl!] )
 
       // retrieve lyrics from API
-      self.api!.getLyrics(for: music.artistName!, song: music.trackName!) {
+      self.api?.getLyrics(for: music.artistName!, song: music.trackName!) {
         (lyrics) in
         self.lyricsTextView.text = lyrics
       }

@@ -57,7 +57,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
   // MARK: - General
 
   func searchMusic(_ query: String) {
-    self.api!.getMusic(query, completion: {
+    self.api?.getMusic(query, completion: {
       (music: [MusicModel]) in
       self.resultsList = music
       self.resultsTableView.reloadData()

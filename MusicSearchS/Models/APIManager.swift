@@ -81,7 +81,7 @@ class APIManager {
               music.trackName = item["trackName"] as? String ?? ""
               music.artistName = item["artistName"] as? String ?? ""
               music.albumName = item["collectionName"] as? String ?? ""
-              music.albumImageUrl = item["artworkUrl100"] as? String
+              music.albumImageUrl = item["artworkUrl100"] as? String ?? ""
               musicResults.append(music)
             }
           }
