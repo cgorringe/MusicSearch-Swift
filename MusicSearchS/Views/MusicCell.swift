@@ -17,7 +17,17 @@ class MusicCell: UITableViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    setupDynamicTypes()
+  }
+
+  /// Call this only once
+  func setupDynamicTypes() {
+    trackLabel.font = UIFontMetrics.default.scaledFont(for: trackLabel.font)
+    artistLabel.font = UIFontMetrics.default.scaledFont(for: artistLabel.font)
+    albumLabel.font = UIFontMetrics.default.scaledFont(for: albumLabel.font)
+    trackLabel.adjustsFontForContentSizeCategory = true
+    artistLabel.adjustsFontForContentSizeCategory = true
+    albumLabel.adjustsFontForContentSizeCategory = true
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {

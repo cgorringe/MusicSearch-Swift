@@ -26,6 +26,7 @@ class LyricsViewController: UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupDynamicTypes()
   }
 
   override func didReceiveMemoryWarning() {
@@ -37,7 +38,15 @@ class LyricsViewController: UIViewController
     updateMusic(self.music)
   }
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// Call this only once
+  func setupDynamicTypes() {
+    self.trackLabel.font = UIFontMetrics.default.scaledFont(for: self.trackLabel.font)
+    self.artistLabel.font = UIFontMetrics.default.scaledFont(for: self.artistLabel.font)
+    self.albumLabel.font = UIFontMetrics.default.scaledFont(for: self.albumLabel.font)
+    self.trackLabel.adjustsFontForContentSizeCategory = true
+    self.artistLabel.adjustsFontForContentSizeCategory = true
+    self.albumLabel.adjustsFontForContentSizeCategory = true
+  }
 
   func updateMusic(_ music: MusicModel?) {
     self.lyricsTextView.text = ""
