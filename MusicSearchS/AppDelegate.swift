@@ -20,6 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     URLCache.shared.memoryCapacity = 4 * 1024 * 1024
     URLCache.shared.diskCapacity = 20 * 1024 * 1024
 
+    // set Dynamic Types for Nav & Search Bars
+    UINavigationBar.appearance().titleTextAttributes = [
+      NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3),
+      NSAttributedString.Key.foregroundColor: UIColor.white
+    ]
+    UIBarButtonItem.appearance().setTitleTextAttributes( [
+      NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3)
+    ], for: UIControl.State.normal)
+    UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [
+      NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
+    ]
+
     return true
   }
 
