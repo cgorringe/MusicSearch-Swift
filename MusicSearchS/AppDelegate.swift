@@ -20,7 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     URLCache.shared.memoryCapacity = 4 * 1024 * 1024
     URLCache.shared.diskCapacity = 20 * 1024 * 1024
 
-    // set Dynamic Types for Nav & Search Bars
+    //setupDynamicTypes()
+    return true
+  }
+
+  /// Set up Dynamic Types for Nav & Search Bars.
+  func setupDynamicTypes() {
     UINavigationBar.appearance().titleTextAttributes = [
       NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3),
       NSAttributedString.Key.foregroundColor: UIColor.white
@@ -31,8 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [
       NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
     ]
-
-    return true
   }
 
   func applicationWillResignActive(_ application: UIApplication) {

@@ -21,24 +21,12 @@ class SplashViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupDynamicTypes()
+    self.view.activateDynamicType(recursive: true)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-
-  /// Call this only once
-  func setupDynamicTypes() {
-    titleLabel.font = UIFontMetrics.default.scaledFont(for: titleLabel.font)
-    subtitleLabel.font = UIFontMetrics.default.scaledFont(for: subtitleLabel.font)
-    authorLabel.font = UIFontMetrics.default.scaledFont(for: authorLabel.font)
-    enterButton.titleLabel?.font = UIFontMetrics.default.scaledFont(for: enterButton.titleLabel!.font)
-    titleLabel.adjustsFontForContentSizeCategory = true
-    subtitleLabel.adjustsFontForContentSizeCategory = true
-    authorLabel.adjustsFontForContentSizeCategory = true
-    enterButton.titleLabel?.adjustsFontForContentSizeCategory = true
   }
 
 }

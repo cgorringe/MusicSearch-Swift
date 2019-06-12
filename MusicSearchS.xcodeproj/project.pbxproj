@@ -18,6 +18,7 @@
 		C329363C2108185900D176D1 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329363B2108185900D176D1 /* MusicCell.swift */; };
 		C329363E21081F2000D176D1 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329363D21081F2000D176D1 /* MusicModel.swift */; };
 		C32936402108519700D176D1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329363F2108519700D176D1 /* APIManager.swift */; };
+		C3A00CC022B09C610043572E /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A00CBF22B09C610043572E /* UsefulExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C329363B2108185900D176D1 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		C329363D21081F2000D176D1 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		C329363F2108519700D176D1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C3A00CBF22B09C610043572E /* UsefulExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				C329361B21080B5D00D176D1 /* Assets.xcassets */,
 				C329362021080B5D00D176D1 /* Info.plist */,
 				C329361421080B5C00D176D1 /* AppDelegate.swift */,
+				C3A00CBE22B09C300043572E /* Extensions */,
 				C329363421080C0700D176D1 /* Models */,
 				C329363521080C0C00D176D1 /* Views */,
 				C329363621080C1100D176D1 /* Controllers */,
@@ -133,6 +136,14 @@
 				C32936392108171C00D176D1 /* LyricsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C3A00CBE22B09C300043572E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3A00CBF22B09C610043572E /* UsefulExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				C329361721080B5C00D176D1 /* SplashViewController.swift in Sources */,
 				C329363A2108171C00D176D1 /* LyricsViewController.swift in Sources */,
 				C329361521080B5C00D176D1 /* AppDelegate.swift in Sources */,
+				C3A00CC022B09C610043572E /* UsefulExtensions.swift in Sources */,
 				C329363E21081F2000D176D1 /* MusicModel.swift in Sources */,
 				C32936402108519700D176D1 /* APIManager.swift in Sources */,
 			);
